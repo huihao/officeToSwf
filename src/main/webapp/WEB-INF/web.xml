@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <listener>
+        <listener-class>rx.whh.aoo.servlet.MyServletContextListener</listener-class>
+    </listener>
+    <servlet>
+        <servlet-name>ConvertServlet</servlet-name>
+        <servlet-class>rx.whh.aoo.servlet.ConvertServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ConvertServlet</servlet-name>
+        <url-pattern>/convert</url-pattern>
+    </servlet-mapping>
+    <!-- 设置log4j配置文件路径 -->
+    <context-param>
+        <param-name>log4jConfigLocation</param-name>
+        <param-value>classpath:log4j.properties</param-value>
+    </context-param>
+  <display-name>word2pdf</display-name>
+</web-app>
